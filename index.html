@@ -2,6 +2,50 @@
 <html lang="en">
 
 <head>
+   <style>
+
+	body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black; /* Arka plan rengi, istediğiniz rengi ayarlayabilirsiniz */
+}
+
+.neon-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    color: yellow; /* Sarı neon rengi */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+}
+
+.neon-text::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00ff00; /* Neon efekti rengi, burada yeşil kullanıldı, ama istediğiniz rengi kullanabilirsiniz */
+    z-index: -1;
+    animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+    from {
+        opacity: 0.8;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    }
+    to {
+        opacity: 1;
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff;
+    }
+}
+	   
+   </style>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
